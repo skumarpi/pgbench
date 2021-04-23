@@ -1,0 +1,39 @@
+app:
+    name: PGBENCH
+    code: pgbench
+    notify: aborra@ecloudcontrol.com
+
+build:
+    version: 0.1
+    env: DEV
+    build_file: none
+    output_files: output/*.zip
+    image_template: pgbench-10.0
+
+deploy:
+    context: anushab7/DEV
+    type: statefulset
+    replicas: 1
+    port:
+    - 80
+volumes:
+  - claim: pgbench-data
+    mount: /appz/log/
+    name: data
+    size: 10Gi
+
+properties:
+    DATABASE_HOST: postgres-master-12-2
+    DATABASE_USER: postgres
+    DATABASE_PORT: 5432
+    DATABASE_NAME: springbootweb
+    DATABASE_PASSWORD: 
+       VAULT: POSTGRESQL_SPRINGBOOT_PASSWORD
+    PGBENCH_SCALE: 5
+    PGBENCH_CLIENTS: 5
+    PGBENCH_RATE: 10
+    PGBENCH_THREADS: 2
+    PGBENCH_DURATION: 10
+    PGBENCH_SCRIPT: tpcb-like
+    TEST_NAME: pgbench-test
+    revision: 16
