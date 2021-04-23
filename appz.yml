@@ -36,4 +36,4 @@ properties:
     PGBENCH_DURATION: 10
     PGBENCH_SCRIPT: tpcb-like
     TEST_NAME: pgbench-test
-    revision: 18
+    revision: 19
