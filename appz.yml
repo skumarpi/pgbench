@@ -24,7 +24,7 @@ volumes:
 
 properties:
     DATABASE_HOST: postgres-master-12-2
-    DATABASE_USER: postgres
+    DATABASE_USER: springbootweb
     DATABASE_PORT: 5432
     DATABASE_NAME: springbootweb
     DATABASE_PASSWORD: 
