@@ -36,4 +36,4 @@ properties:
     PGBENCH_RATE: 200
     PGBENCH_THREADS: 100
     PGBENCH_DURATION: 120
-    revision: 23
+    revision: 25
