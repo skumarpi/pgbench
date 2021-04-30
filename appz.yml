@@ -23,8 +23,8 @@ volumes:
     size: 10Gi
 
 properties:
-    DATABASE_HOST: 192.168.61.185
-    TEST_NAME: vm-test-10M2M
+    DATABASE_HOST: 192.168.61.170
+    TEST_NAME: 0430-vm-test-10M2M
     PGBENCH_SCRIPT: tpcb-like
     DATABASE_USER: springbootweb
     DATABASE_PORT: 5432
